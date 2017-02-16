@@ -1,0 +1,41 @@
+<h1>Editando Anúncio</h1>
+
+<%= form_for([:site, :profile, @ad]) do |f| %>
+
+	<div class="row">
+	  <div class="form-group">
+	  	<div class="col-xs-6">
+		    <%= f.label :title %>
+		    <%= f.text_field :title, class: "form-control", placeholder: "Título" %>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="row">
+	  <div class="form-group">
+	  	<div class="col-xs-3">
+		    <label for="exampleInputPassword1">Password</label>
+		    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+		  </div>
+	  </div>
+	</div>
+
+	<div class="row">
+	  <div class="form-group">
+	  	<div class="col-xs-4">
+		    <label for="exampleInputFile">File input</label>
+		    <input type="file" id="exampleInputFile">
+		    <p class="help-block">Example block-level help text here.</p>
+		   </div>
+	  </div>
+	</div>
+
+	<div class="row">
+	  <div class="checkbox">
+	    <label>
+	      <input type="checkbox"> Check me out
+	    </label>
+	  </div>
+	</div>
+  <button type="submit" class="btn btn-default">Submit</button>
+<% end %>
