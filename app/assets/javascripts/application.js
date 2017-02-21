@@ -11,5 +11,5 @@
 // about supported directives.
 //
 //= require jquery
-//= require notifyjs
+//= require bootstrap.growl
 //= require jquery_ujs
