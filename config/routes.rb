@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+
   get 'backoffice', to: 'backoffice/dashboard#index'
 
   namespace :backoffice do
@@ -7,23 +7,22 @@ Rails.application.routes.draw do
     resources :categories, except: [:show, :destroy]
     resources :admins, except: [:show]
     get 'dashboard', to: 'dashboard#index'
-    get 'admins/index'
   end
 
   namespace :site do
-    get 'home', to: 'home/index'
+    get 'home', to: 'home#index'
 
     namespace :profile do
       resources :dashboard, only: [:index]
       resources :ads, only: [:index, :edit, :update, :new, :create]
     end
-
   end
 
   devise_for :admins, :skip => [:registrations]
-  devise_for :members
+  devise_for :members, controllers: { sessions: 'members/sessions' }
 
   root 'site/home#index'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
