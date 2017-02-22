@@ -13,3 +13,15 @@
 //= require jquery
 //= require bootstrap.growl
 //= require jquery_ujs
+
+/* Spin */
+$(document).ready(function() {
+  // Global ajax cursor change
+  $(document)
+    .ajaxStart(function () {
+        $('#global-spin').fadeIn('slow');
+    })
+    .ajaxStop(function () {
+        $('#global-spin').fadeOut('slow');
+    });
+});
