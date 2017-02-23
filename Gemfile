@@ -50,6 +50,8 @@ gem 'jquery-rails'
 # jQuery UI for the Rails asset pipeline
 gem 'jquery-ui-rails'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+#Redcarpet is a Ruby library for Markdown processing that smells like butterflies and popcorn.
+gem 'redcarpet'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
@@ -83,5 +85,7 @@ group :development do
   gem 'lerolero_generator'
   # Catches mail and serves it through a dream.
   gem 'mailcatcher'
+  # Markdown Lorem Ipsum generator
+  gem 'doctor_ipsum'
 end
 
