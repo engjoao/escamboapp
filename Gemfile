@@ -59,6 +59,8 @@ gem 'redcarpet'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
+# FriendlyId is the “Swiss Army bulldozer” of slugging and permalink plugins for ActiveRecord. It allows you to create pretty URL’s and work with human-friendly strings as if they were numeric ids for ActiveRecord models.
+gem 'friendly_id'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
