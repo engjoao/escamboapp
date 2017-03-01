@@ -61,6 +61,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 # FriendlyId is the “Swiss Army bulldozer” of slugging and permalink plugins for ActiveRecord. It allows you to create pretty URL’s and work with human-friendly strings as if they were numeric ids for ActiveRecord models.
 gem 'friendly_id'
+# If Turbolinks are not enough for you. Wiselinks makes your application work faster.
+gem 'wiselinks'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
