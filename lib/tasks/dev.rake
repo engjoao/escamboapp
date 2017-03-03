@@ -2,20 +2,25 @@ namespace :dev do
 
   desc "Setup Development"
   task setup: :environment do
+    images_path = Rails.root.join('public','system')
+
     puts "Executando o setup para desenvolvimento..."
-    images_path = Rails.root.join('public', 'system') 
 
     puts "APAGANDO BD... #{%x(rake db:drop)}"
-    puts "APAGANDO IMAGENS DE public/system... #{%x(rm -rf #{images_path})}"
+    puts "Apagando imagens de public/system #{%x(rm -rf #{images_path})}"
     puts "CRIANDO BD... #{%x(rake db:create)}"
     puts %x(rake db:migrate)
     puts %x(rake db:seed)
     puts %x(rake dev:generate_admins)
     puts %x(rake dev:generate_members)
     puts %x(rake dev:generate_ads)
+    puts %x(rake dev:generate_comments)
 
-    puts "Setup implantado com sucesso!"
+    puts "Setup completado com sucesso!"
   end
+
+  #################################################################
+
   desc "Cria Administradores Fake"
   task generate_admins: :environment do
     puts "Cadastrando ADMINISTRADORES..."
@@ -68,6 +73,7 @@ namespace :dev do
         picture: File.new(Rails.root.join('public', 'templates', 'images-for-ads', "#{Random.rand(9)}.jpg"), 'r')
       )
     end
+
     100.times do
       Ad.create!(
         title: Faker::Lorem.sentence([2,3,4,5].sample),
@@ -88,4 +94,22 @@ namespace :dev do
     %x(ruby -e "require 'doctor_ipsum'; puts DoctorIpsum::Markdown.entry")
   end
 
+  #################################################################
+
+  desc "Cria Comentários Fake"
+  task generate_comments: :environment do
+    puts "Cadastrando COMENTÁRIOS..."
+
+    Ad.all.each do |ad|
+      (Random.rand(3)).times do
+        Comment.create!(
+          body: Faker::Lorem.paragraph([1,2,3].sample),
+          member: Member.all.sample,
+          ad: ad
+        )
+      end
+    end
+
+    puts "COMENTÁRIOS cadastrados com sucesso!"
+  end
 end
