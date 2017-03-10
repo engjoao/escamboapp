@@ -90,24 +90,22 @@
 
 
                                 <div class="form-group">
-                                    <%= f.label :email, class:"col-md-3 control-label" %>
+                                    <%= f.label :email, class: "col-md-3 control-label" %>
                                     <div class="col-md-9">
-                                        <%= f.email_field :email, autofocus: true, class:"form-control", placeholder:"Email Address" %>
+                                        <%= f.email_field :email, autofocus: true, class: "form-control", placeholder:"Email Address" %>
                                     </div>
                                 </div>
 
                                 <%= f.fields_for :profile_member do |profile_fields| %>
                                     <div class="form-group">
-                                        <label for="first_name" class="col-md-3
-                                        <%= f.label :first_name, class:"col-md-3 control-label" %>
+                                        <%= profile_fields.label:first_name, class: "col-md-3 control-label" %>
                                         <div class="col-md-9">
-                                            <%= profile_fields.text_field :first_name, class:"form-control" %>
+                                            <%= profile_fields.text_field :first_name, class: "form-control" %>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="second_name" class="col-md-3
-                                        <%= f.label :second_name, class:"col-md-3 control-label" %>
+                                        <%= profile_fields.label:second_name, class: "col-md-3 control-label" %>
                                         <div class="col-md-9">
                                             <%= profile_fields.text_field :second_name, class:"form-control" %>
                                         </div>
@@ -115,14 +113,14 @@
                                 <% end %>
 
                                 <div class="form-group">
-                                    <%= f.label :password, class:"col-md-3 control-label" %>
+                                    <%= f.label :password, class: "col-md-3 control-label" %>
                                     <div class="col-md-9">
                                         <%= f.password_field :password, autocomplete: "off", class:"form-control", placeholder:"Password" %>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <%= f.label :password_confirmation, class:"col-md-3 control-label" %>
+                                    <%= f.label :password_confirmation, class: "col-md-3 control-label" %>
                                     <div class="col-md-9">
                                         <%= f.password_field :password_confirmation, autocomplete: "off", class:"form-control", placeholder:"Password Confirmation" %>
                                     </div>
