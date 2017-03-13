@@ -23,6 +23,6 @@ class Member < ActiveRecord::Base
   end
 
   def nested_attributes_blank?
-  	profile_member.first_name.blank? && profile_member.second_name.blank? 
+  	profile_member.first_name.blank? || profile_member.second_name.blank? 
   end
 end

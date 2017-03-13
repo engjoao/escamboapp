@@ -26,29 +26,35 @@ end
 
 puts "CATEGORIAS cadastradas com sucesso!"
 
-#####################################################
+###################
 
-puts "Cadastrando administrador Padrão..."
+puts "Cadastrando o ADMINISTRADOR Padrão..."
 
 Admin.create!(
-     name: "Administrador Geral",
-     email: "admin@admin.com",
-     password: "123456",
-     password_confirmation: "123456",
-     role: 0)
+  name: "Administrador Geral",
+  email: "admin@admin.com",
+  password: "123456",
+  password_confirmation: "123456",
+  role: 0
+)
 
 puts "ADMINISTRADOR cadastrado com sucesso!"
 
-########################################################
+###################
 
-puts "Cadastrando membro Padrão..."
+puts "Cadastrando o MEMBRO Padrão..."
 
-     Member.create!(
-          email: "membro@membro.com",
-          password: "123456",
-          password_confirmation: "123456"
-     )
+member = Member.new(
+  email: "membro@membro.com",
+  password: "123456",
+  password_confirmation: "123456"
+)
+
+member.build_profile_member
+
+member.profile_member.first_name = Faker::Name.first_name
+member.profile_member.second_name = Faker::Name.last_name
+
+member.save!
 
 puts "MEMBRO cadastrado com sucesso!"
-
-########################################################
