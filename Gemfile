@@ -101,5 +101,19 @@ group :development do
   gem 'mailcatcher'
   # Markdown Lorem Ipsum generator
   gem 'doctor_ipsum'
+  # Remote multi-server automation tool
+  gem 'capistrano', '~> 3.7'
+  # Offical Ruby on Rails specific task for Capistrano
+  gem 'capistrano-bundler', '~> 1.2'
+  # Bundler support for Capistrano 3.x
+  gem 'capistrano-rails', '~> 1.2'
+  # RVM support for Capistrano v3:
+  gem 'capistrano-rvm'
 end
+
+group :production do
+  # MySQL Adapter
+  gem 'mysql2', '~> 0.3.18'
+end
+
 
