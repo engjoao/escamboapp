@@ -22,6 +22,13 @@ gem 'pundit'
 gem 'money-rails'
 # Easy file attachment management for ActiveRecord 
 gem 'paperclip', '~> 5.0.0'
+# A library for generating fake data such as names, addresses, and phone numbers.
+gem 'faker'
+# Markdown Lorem Ipsum generator
+gem 'doctor_ipsum'
+# O Lero-lero Generator é uma ferramenta capaz de gerar frases que 'falam' muita coisa mas que não tem conteúdo algum.
+gem 'lerolero_generator'
+# Catches mail and serves it through a dream.
 
 source 'https://rails-assets.org' do
   # Bootstrap
@@ -93,14 +100,9 @@ group :development do
   gem 'better_errors'
   # Generate Entity-Relationship Diagrams for Rails applications
 	gem "rails-erd"
-  # A library for generating fake data such as names, addresses, and phone numbers.
-  gem 'faker'
-  # O Lero-lero Generator é uma ferramenta capaz de gerar frases que 'falam' muita coisa mas que não tem conteúdo algum.
-  gem 'lerolero_generator'
-  # Catches mail and serves it through a dream.
+
   gem 'mailcatcher'
-  # Markdown Lorem Ipsum generator
-  gem 'doctor_ipsum'
+
   # Remote multi-server automation tool
   gem 'capistrano', '~> 3.7'
   # Offical Ruby on Rails specific task for Capistrano
