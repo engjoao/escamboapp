@@ -1,6 +1,6 @@
 'pt-BR':
   app:
-    name: EscamboApp
-    site_subtitle: Site - EscamboApp
-    backoffice_subtitle: Backoffice - EscamboApp
-    profile_subtitle: Perfil - EscamboApp
+    name: Mercadão do João
+    site_subtitle: Site - Mercadão do João
+    backoffice_subtitle: Backoffice - Mercadão do João
+    profile_subtitle: Perfil - Mercadão do João
