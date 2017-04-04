@@ -7,8 +7,8 @@ Rails.application.configure do
   # Mailgun Config
   config.action_mailer.delivery_method = :mailgun
   config.action_mailer.mailgun_settings = {
-   api_key: Rails.application.secrets.MAILGUN_SECRET_API_KEY,
-   domain: 'mg.mercadaodojoao.com.br',
+    api_key: Rails.application.secrets.MAILGUN_SECRET_API_KEY,
+    domain: 'mg.mercadaodojoao.com.br',
   }
 
   # Code is not reloaded between requests.
